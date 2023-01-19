@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="display: flex; width: 800px; height: 100vh; justify-content: center; align-items: center;">
+    <button id="btn">Click to show</button>
+    <p id="result" style="margin-left: 10px;"></p>
+  </div>
+  <script>
+    function showThis() {
+      const element = document.getElementById("result")
+      console.log("this", this)
+      element.innerHTML = 'Context of "this":' + this
+    }
+    window.addEventListener("load", showThis);
+    document.getElementById("btn").addEventListener("click", showThis);
+  </script>
+</body>
+
+</html>
