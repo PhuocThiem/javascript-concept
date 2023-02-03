@@ -1,5 +1,4 @@
 // Call method is a Function prototype so we can only using it with a function
-
 // Call method allow we pass a object to a function with argument
 
 let person = {
@@ -18,5 +17,5 @@ let van = {
 };
 
 person.showInfo()
-person.showInfo.call(van, 'Le', 'Tien');
-person.showInfo.call(van, '', '');
+person.showInfo.apply(van, ['Le', 'Tien']);
+person.showInfo.apply(van, ['', '']);
